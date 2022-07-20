@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*{
+    margin: 0;
+    padding: 0px;
+    font-family: 'Alata', sans-serif;
+}
+
+body{
+    background-image: ;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:30vw;
+    height: 70vh;
+    padding: 1rem;
+    border: 1px solid black;
+    border-width: 1rem;
+    border-radius: 10%;
+    background-color: rgb(49, 226, 43);
+    box-shadow: 0 0 10px black;
+}
+
+
+
+input{
+    width: 25vw;
+    height: 5vh;
+    padding: 0.2rem;
+    margin: 0.4rem;
+}
+
+button{
+    width: 19vw;
+    height: 7vh;
+    color: rgb(49, 226, 43);
+    background-color: black;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(140, 230, 140);
+    color: black;
+    font-weight: bolder;
+}
+
+#answer{
+    height: 13vh;
+    background-color: black;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    border: 1px solid black;
+    border-width: 0.5rem;
+    background-color: rgb(49, 226, 43);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a:hover{
+    color: white;
+}

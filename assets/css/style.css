@@ -58,12 +58,6 @@ button:hover{
     font-weight: bolder;
 }
 
-#answer{
-    height: 13vh;
-    background-color: black;
-    color: white;
-}
-
 footer{
     text-align: center;
     border: 1px solid black;
@@ -79,4 +73,9 @@ a{
 
 a:hover{
     color: white;
+}
+
+#result{
+    padding: 1rem;
+    margin: 1.5rem;
 }

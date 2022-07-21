@@ -17,20 +17,23 @@ const calcularIMC = () => {
     if(imc < 18.5 ){
         result.innerHTML =  `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Magreza`
     }
-    if(imc >= 18.5 && imc <= 24.9){
+    if(imc >= 18.5 && imc <=24.9){
         result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Normal`
     }
     if(imc >= 25 && imc <= 29.9){
-        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Sobrepeso.(Obesidade grau I)`
+        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Sobrepeso.`
     }
-    if(imc >= 30 && imc <= 39.9){
+    if(imc >= 30 && imc <= 34.9){
+        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Obesidade (Obesidade grau I).`
+    }
+    if(imc >= 35 && imc <= 39.9){
         result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Obesidade (Obesidade grau II).`
     }
     if(imc > 40 ){
-    result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Obesidade Grave (Obesidade grau III).`
+        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Obesidade Grave (Obesidade grau III).`
 
     }
-    result.innerHTML = "Não foi possível calcular."
+   
 }
 btt.addEventListener('click', calcularIMC)
 result.addEventListener('click', calcularIMC)

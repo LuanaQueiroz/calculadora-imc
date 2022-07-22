@@ -2,7 +2,7 @@
 let btt = document.querySelector('#btt')
 
 const factoryResult = (nam, weight, imc, classificacao) => {
-    return `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc}, classificação: ${classificacao}`
+    return `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: ${classificacao}`
 }
 
 const calcularIMC = () => {

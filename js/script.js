@@ -1,6 +1,10 @@
 
 let btt = document.querySelector('#btt')
 
+const factoryResult = (nam, weight, imc, classificacao) => {
+    return `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc}, classificação: ${classificacao}`
+}
+
 const calcularIMC = () => {
 
     const nam = document.querySelector('#name').value
@@ -13,27 +17,27 @@ const calcularIMC = () => {
 
     let imc = Number(weight) / Number(height**2)
 
-    
+    let resul = ''
     if(imc < 18.5 ){
-        result.innerHTML =  `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Magreza`
+        resul = factoryResult(nam, weight, imc, "Magreza")
     }
     if(imc >= 18.5 && imc <=24.9){
-        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Normal`
+        resul = factoryResult(nam, weight, imc, "Normal")
     }
     if(imc >= 25 && imc <= 29.9){
-        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Sobrepeso.`
+        resul = factoryResult(nam, weight, imc, "Sobrepeso")
     }
     if(imc >= 30 && imc <= 34.9){
-        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Obesidade (Obesidade grau I).`
+        resul = factoryResult(nam, weight, imc, "Obesidade grau I")
     }
     if(imc >= 35 && imc <= 39.9){
-        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Obesidade (Obesidade grau II).`
+        resul = factoryResult(nam, weight, imc, "Obesidade grau II")
     }
     if(imc > 40 ){
-        result.innerHTML = `Olá, ${nam}, seu peso é: ${weight}kg. IMC: ${imc.toFixed(2)}, classificação: Obesidade Grave (Obesidade grau III).`
+        resul = factoryResult(nam, weight, imc, "Obesidade grau III")
 
     }
-   
+   result.innerHTML = resul
 }
 btt.addEventListener('click', calcularIMC)
 result.addEventListener('click', calcularIMC)
